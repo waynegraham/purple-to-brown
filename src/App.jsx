@@ -10,9 +10,9 @@ function App() {
   const [selectedVideoId, setSelectedVideoId] = useState('')
   const [modalTitle, setModalTitle] = useState(''); // State for modal title
 
-
   const openModal = (videoId, title) => {
     setSelectedVideoId(videoId);
+    setModalTitle(title); // Set modal title
     setIsModalOpen(true);
   }
 
@@ -31,11 +31,14 @@ function App() {
       >
         Purple to Brown
       </h1>
-      <h2 className="mt-3 mb-8 text-slate-600 dark:text-slate-300 text-2xl font-semibold tracking-tighter">
+      <h2 className="inline-block mt-5 mb-8 text-yellow-900 dark:text-yellow-700 text-2xl font-semibold tracking-tighter">
+        Blue Belt Demonstration
+      </h2>
+      {/* <h2 className="mt-3 mb-8 text-slate-600 dark:text-slate-300 text-2xl font-semibold tracking-tighter">
         Curriculum Techniques
       </h2>
 
-      <h1 className="text-xl text-yellow-900 dark:text-yellow-700 font-semibold">Test Requirements</h1>
+      <h1 className="text-xl text-yellow-900 dark:text-yellow-700 font-semibold">Test Requirements</h1> */}
       {movesData.map((move) => ( // Map through moves data
         <div key={move.label}>
           <h2 className="my-3 text-xl text-gray-900 dark:text-gray-300">{move.label}</h2>
